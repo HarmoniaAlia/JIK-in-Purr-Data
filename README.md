@@ -4,7 +4,7 @@ This is an early prototype of Just Intonation Keyboard, developed in Purr Data.
 To run this, please follow these steps: 
  1. Install Purr Data on your machine
  	https://github.com/agraef/purr-data/releases
- 2. Unzip the files included in this prototype
+ 2. Download all the files included in this prototype to a single directory on your computer
  3. Run the patch jik.pd
  4. Click on "View" toggle to show/hide the patch, that contains the keyboard. Click on ON/OFF toggle to turn/off the sound. 
 
