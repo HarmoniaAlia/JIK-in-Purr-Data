@@ -1,0 +1,46 @@
+#N struct key-rectangle float x float y float pitch float w float h
+symbol fill-col float fill-opac symbol edge-col float edge-opac float
+edge-width float round-x float round-y float rot-key float rot-board
+float center-x float center-y;
+#N canvas 425 0 922 893.031 10;
+#X msg 107 189 mousedown 1 \, mouseup 1;
+#X obj 354 510 pack f 0;
+#X obj 257 330 unpack s p;
+#X obj 257 390 pack s f;
+#X obj 257 450 route mousedown mouseup;
+#X obj 257 420 list trim;
+#X obj 227 570 s tone;
+#X obj 354 570 s tone;
+#X obj 227 510 pack f 100;
+#X obj 238 101 loadbang;
+#X obj 257 301 draw rect w h x y;
+#X obj 314 360 get key-rectangle pitch;
+#X obj 70 22 struct key-rectangle float x float y float pitch float
+w float h symbol fill-col float fill-opac symbol edge-col float edge-opac
+float edge-width float round-x float round-y float rot-key float rot-board
+float center-x float center-y, f 88;
+#X msg 257 189 transform rotate rot-board center-x center-y \, transform
+rotate rot-key, f 27;
+#X obj 238 131 t b b b;
+#X obj 354 480 pipe 1500;
+#X msg 446 189 fill symbol fill-col \, fill-opacity fill-opac \, stroke
+symbol edge-col \, stroke-opacity edge-opac \, stroke-width edge-width
+\, rx round-x \, ry round-y \,, f 26;
+#X connect 0 0 10 0;
+#X connect 1 0 7 0;
+#X connect 2 0 3 0;
+#X connect 2 1 11 0;
+#X connect 3 0 5 0;
+#X connect 4 0 8 0;
+#X connect 4 1 15 0;
+#X connect 5 0 4 0;
+#X connect 8 0 6 0;
+#X connect 9 0 14 0;
+#X connect 10 0 2 0;
+#X connect 11 0 3 1;
+#X connect 13 0 10 0;
+#X connect 14 0 0 0;
+#X connect 14 1 13 0;
+#X connect 14 2 16 0;
+#X connect 15 0 1 0;
+#X connect 16 0 10 0;
